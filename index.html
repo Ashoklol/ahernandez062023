@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Hernandez - Portfolio</title>
+<style>
+/* set page colors with variables */
+:root{
+    --color-primary:black;
+    --color-secondary:blue ;
+}
+/* .header{
+    background-color:var(--color-primary) 
+} */
+
+
+/* Reset Browser */ 
+
+*,*::before,
+*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+} 
+
+
+/* Fix browser bounce  */
+
+body{
+    overflow-x:auto;
+    width:100%;
+    overscroll-behavior: none;
+    background-color: white;
+    background-image: url(Images/bluebutterflies.jpg);
+    background-size: cover;
+}
+
+
+
+
+/* General css for mobile first */
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.5;
+    background-color: white;
+    color:black;
+    
+    background-size: cover;
+    
+}
+
+a{
+    text-decoration: none;
+
+}
+
+p{
+    margin:1rem 0;
+    
+
+}
+
+
+h1,h2{
+    text-align:center;
+    
+
+}
+
+li{
+    line-height: 2;
+
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 30px;
+    
+    
+    
+}
+h1,h2,h3{
+    line-height: 1.2;
+}
+
+
+/* HEADER */
+.header{
+    background-color: var(--color-primary);
+    height:70px;
+    
+    
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    height:100%;
+    padding:0 20px 0 2px;
+    align-items:center;
+    
+
+    
+
+}
+header img{
+    height:45px;
+}
+.header a:hover{
+    color:lightblue;
+}
+.logos{
+    display:none;
+}
+.logo{
+    width:300px;
+} 
+.menu{
+    display:flex;
+    width:200px;
+    list-style-type:none;
+}
+.menu li{
+    padding:0 10px 0  10px;
+    display:flex;
+
+}
+.menu li a{
+    color:white;
+}
+
+
+
+/* Showcase */
+
+
+.showcase{
+    padding:30px;
+    color:white;
+    /* background-image: url(Images/singlebutterfly.png);
+     */
+    background-color:  rgba(16, 112, 163, 0.297);
+    font-family:fantasy;
+    
+
+}
+
+#showcase-text{
+    color:white;
+    text-align:center;
+    margin:50px auto;
+    max-width:500px;
+}
+.showcase h1{
+    font-size:50px;
+    margin-bottom:20px;
+
+}
+.showcase p{
+    font-size:24px;
+    margin-bottom:20px;
+}
+.showcase-img{
+    text-align:center;
+}
+.showcase-img img{
+    border-radius:10px;
+    margin:0 auto;
+    
+}
+.showcase-demo{
+    color:white;
+    text-align:center;
+    
+    
+
+}
+.features{
+    
+}
+.features .container{
+    margin-top:40px;
+    display:flex;
+    gap:1rem;
+    justify-content: space-between;
+    position:relative;
+    flex-direction:column;
+    
+    
+}
+.features img{
+    width:500px;
+    height:300px;
+    position:absolute;
+    top:-18.5rem;
+    right:0;
+}
+/* Cards */
+
+.card{
+    background-color: white;
+    padding:2rem;
+    box-shadow:2px 0 20px #447faa;
+    margin-bottom:20px;
+    flex-basis:28%;
+    border:2px solid #04367a;
+    
+}
+
+
+/* Page content */
+.page-content{
+    margin:20px 0;
+    background-color:rgba(16, 112, 163, 0.297);
+    color:white;
+    text-shadow:2px 2px 2px #0b73ad;
+
+}
+.page-content h2,.page-content h3{
+    margin:20 0;
+    
+
+}
+
+.page-content h2{
+    font-size:40px;
+}
+
+.page-content h3{
+    font-size:25px;
+}
+
+/* Semesters */
+.semesters{
+    margin:20px 0;
+    background-color:  rgba(16, 112, 163, 0.297);
+    text-shadow:2px 2px 2px #0b73ad;
+    
+}
+.semesters .container{
+
+}
+.semesters h2, .semesters h3{
+    color:white;
+    margin:20px 0;
+}
+.semesters h2{
+    font-size:40px;
+}
+.semesters h3{
+    font-size:25px;
+}
+.semesters p{
+    color:white;
+}
+
+/* Footer section */
+
+.footer{
+    background-color: var(--color-primary);
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+.footer .container{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.footer a{
+    color:white;
+}
+.footer a:hover{
+    color:lightblue;
+}
+.footer h3{
+    margin-bottom:20px;
+
+}
+
+.quote{
+    text-align: center;
+
+}
+.footerlinks{
+    display:none;
+
+}
+
+
+@media (min-width:700px)
+{
+    .features .container{
+        flex-direction:row;
+    }
+    h1, {
+        text-align:center;
+    }
+    .footerlinks{
+        display:contents;
+        
+        
+        
+    }
+}
+
+@media (min-width:960px)
+{
+    .logos{
+        display:block;
+        margin:auto;
+        
+    }
+    .card{
+        text-align:center;
+    }
+    .logos-small{
+        display:none;
+        
+    
+    }
+    
+}
+#toptext{
+    margin-top:5px;
+    padding:1px;
+}
+hr{
+    margin-top:4px;
+}
+#secondhalf{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+
+
+
+</head>
+<body>
+    <!-- Begin Header -->
+    <header class="header">
+
+        <div class="container">
+            <div class="logo">
+            <a href="index.html">    <img src="Images/logo.png" alt="logo"></a>
+            </div>
+    
+    
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+    
+            </nav>
+        </div>
+
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Begin Showcase -->
+
+    <section class="showcase">
+        <div id="showcase-text">
+            <h1>Ashley  
+            Hernandez</h1>
+            <h2>Portfolio</h2>
+        </div>
+        
+        <div class="showcase-img">
+            <img src="Images/framework-logos.png" alt="fraamework logos" class="logos">
+            <img src="Images/framework-logos-small.png" alt="framework logos" class="logos-small"/>
+        </div>
+    
+    
+        <p class="showcase-demo">
+            <small>Work Showcase</small>
+        </p>
+    
+    
+    </section>
+    <!-- End Showcase -->
+    
+    
+    
+    <!-- Begin Features -->
+    <section class="features">
+    
+        <div class="container">
+            <div class="card">
+                <h3>Career</h3> 
+                <hr>
+                <h5 id="toptext">Music</h5>
+                <h5>Creator</h5>
+                <h5>Developer</h5>
+    
+            </div>
+            <div class="card">
+                <h3>Design</h3>
+                <hr>
+                <h5 id="toptext">Photoshop</h5>
+                <h5>Editing</h5>
+                <h5>Thumbnails</h5>
+                
+            </div> 
+            <div class="card">
+                <h3>Programming</h3>
+                <hr>
+                <h5 id="toptext">HTML</h5>
+                <h5>CSS</h5> 
+                <h5>JavaScript</h5>
+                    
+                <img src="Images/transparentbutterfly.png" alt="">
+            </div>
+        </div>
+    </section>
+
+<!-- End Features -->
+
+
+
+<!-- Start Page-Content -->
+    <section class="page-content">
+
+    <div class="container">
+    
+        <h2>About Me</h2>
+        <p>Ashley Hernandez is a high school student who grew up in the small town of Huron in the County of Fresno. She can do lots of different styles of editing (videos) and a lot of photoshop. She can also produce different types and genres of music styles from sad, all the way to hard rock and/or metal. She loves to listen to music, has years of experience, and is really professional at mixing and mastering. She is also able to play various instruments like the violin, recorder, and trombone. She can even code HTML and CSS plus, a bit of JavaScript. Her goal is to keep learning as she continues to produce music. She has expertise in using an online platform that can produce, manipulate, and edit music.</p>
+    
+        <h3>Career</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque officia eveniet non odit hic nulla vitae, aliquam eligendi, dolores officiis inventore voluptatum sequi! Velit optio ipsam praesentium sunt est nostrum!</p>
+    
+        <h3>Design</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum sunt non repellat numquam nulla odit at, sint quia quis quam! Harum perspiciatis error earum possimus cum modi qui est iste!
+        </p>
+    
+        <h3>Programming</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugiat dolorem hic velit temporibus similique ipsa, ratione non accusamus nemo aliquid tenetur veritatis esse dolore odit? Accusantium porro molestiae consequuntur.</p>
+    </div>
+
+
+    </section>
+
+
+<!-- End Page-Content -->
+
+
+
+<!-- Begin Semesters Section -->
+    <section class="semesters">
+
+
+    <div class="container">
+        <h2>Key Assignments</h2>
+        <h3>Semester 1</h3>
+        <a href="Activities/CanvasDrawing1/canvasdrawing1.html"><P>CanvasDrawing1</P></a>
+        <a href="Activities/PaintBrushPrototype1/paintbrushprototype.html"><p>Paintbrush Prototype 1</p></a>
+        <a href="Demos/PaintBrushV1/paintbrushv1.html"><p>Paintbrush Prototype 2</p></a>
+        <a href="Demos/ArraysReview/array.html"><p>Arrays</p></a>
+    
+        <h3>Semester 2</h3>
+        <a href="Demos/CanvasInterface/canvasinterface.html"><p>Drawing in Canvas (Review)</p></a>
+        
+    </div>
+
+    </section>  
+
+<!-- End Semesters Section -->
+
+
+
+<!-- Begin Footer Section -->
+    <footer class="footer">
+
+    <div class="container">
+
+            <div class="quote">
+                <h3> Final Thoughts</h3>
+                <blockquote> All I know, is that I know nothing</blockquote>
+                <p>- Socrates</p>
+            </div>
+    
+            
+
+            <div class="footerlinks">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                
+            </div>
+    </div>
+
+
+    </footer>
+</body>
+</html>
